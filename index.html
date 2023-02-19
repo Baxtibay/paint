@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Project</title>
+  <title>Paint</title>
 
   <!-- stylesheets -->
   <link rel="stylesheet" href="css/normalize.css">
@@ -12,6 +12,65 @@
 </head>
 <body>
 
+  <div class="container">
+    <section class="drawing-board">
+      <canvas></canvas>
+    </section>
+    <section class="tools-board">
+      <div class="row">
+        <label class="title"></label>
+        <ul class="options">
+          <li class="option tool" id="rectangle">
+            <img src="img/rectangle.svg" alt="rectangle">
+            <span>To'rtburchak</span>
+          </li>
+          <li class="option tool" id="circle">
+            <img src="img/circle.svg" alt="circle">
+            <span>Doira</span>
+          </li>
+          <li class="option tool" id="triangle">
+            <img src="img/triangle.svg" alt="triangle">
+            <span>Uchburchak</span>
+          </li>
+          <li class="option">
+            <input type="checkbox" id="fill-color">
+            <label for="fill-color">Rangni toldirish</label>
+          </li>
+        </ul>
+      </div>
+      <div class="row">
+        <label class="title">Variantlar</label>
+        <ul class="options">
+          <li class="option tool active" id="brush">
+            <img src="img/brush.svg" alt="brush">
+            <span>brush</span>
+          </li>
+          <li class="option tool" id="eraser">
+            <img src="img/eraser.svg" alt="eraser">
+            <span>O'chirish</span>
+          </li>
+          <li class="option">
+            <input type="range" id="size-slider" min="1" max="30" value="5">
+          </li>
+        </ul>
+      </div>
+      <div class="row colors">
+        <label class="title">ranglar</label>
+        <ul class="options">
+          <li class="option selected"></li>
+          <li class="option"></li>
+          <li class="option"></li>
+          <li class="option">
+            <input type="color" id="color-picker" value="#4a98f7">
+          </li>
+        </ul>
+      </div>
+      <div class="row buttons">
+        <button class="clear-button">O'chirish</button>
+        <button class="save-img">Saqlash</button>
+      </div>
+    </section>
+  </div>
 
   <script src="js/main.js"></script>
 </body>
